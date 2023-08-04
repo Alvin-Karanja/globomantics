@@ -5,7 +5,7 @@ import Header from "./header";
 function Index() {
   return (
       <div className="container">
-        <Header />
+        <Header subtitle="Providing houses all over the world" />
       </div>
   );
 }
