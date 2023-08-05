@@ -13,30 +13,30 @@ function App() {
 
     const allHouses = useHouses();
     const featuredHouse = useFeaturedHouse(allHouses);
-    const header = <Header subtitle="Providing houses all over the world" />;
+    const header = <Header subtitle="Providing houses all over the world"/>;
 
     return (
-      <Router>
-          <HousesContext.Provider value={allHouses}>
-              <div className="container">
-                  {header}
-                  <HouseFilter />
-                  <Router>
-                      <Route path="/searchresults/:country">
-                          <SearchResults />
-                      </Route>
+        <Router>
+            <HousesContext.Provider value={allHouses}>
+                <div className="container">
+                    {header}
+                    <HouseFilter/>
+                    <Router>
+                        <Route path="/searchresults/:country">
+                            <SearchResults/>
+                        </Route>
 
-                      <Route path="/house/:id">
-                          <HouseFromQuery />
-                      </Route>
+                        <Route path="/house/:id">
+                            <HouseFromQuery/>
+                        </Route>
 
-                      <Route path="/">
-                          <FeaturedHouse house={featuredHouse} />
-                      </Route>
-                  </Router>
-              </div>
-          </HousesContext.Provider>
-      </Router>
+                        <Route path="/">
+                            <FeaturedHouse house={featuredHouse}/>
+                        </Route>
+                    </Router>
+                </div>
+            </HousesContext.Provider>
+        </Router>
     );
 }
 

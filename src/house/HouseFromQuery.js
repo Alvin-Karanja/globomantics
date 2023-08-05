@@ -4,7 +4,7 @@ import {useContext} from "react";
 import HousesContext from "../context/housesContext";
 
 const HouseFromQuery = () => {
-    const { id } = useParams();
+    const {id} = useParams();
     const allHouses = useContext(HousesContext);
     const house = allHouses.find((h) => h.id === parseInt(id));
 
