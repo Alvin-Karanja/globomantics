@@ -1,4 +1,5 @@
 import House from "../house";
+
 const FeaturedHouse = ({ house }) => {
     if (house)
         return (
